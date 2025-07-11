@@ -1,10 +1,11 @@
 import { Navigate, Outlet } from "react-router-dom"
-import { NavBar } from "./Navbar.jsx"
+import { NavBar } from "../nav/nav"
+
 
 export const Authorized = () => {
-  if (localStorage.getItem("rock_token")) {
+  if (localStorage.getItem("rater_token")) {
     return <>
-      <NavBar />
+      <NavBar/>
       <main className="p-4">
         <Outlet />
       </main>
